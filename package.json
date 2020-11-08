@@ -1,0 +1,20 @@
+{
+  "name": "web3-sendee",
+  "version": "0.1.0",
+  "description": "Self-healing web3 backend service.",
+  "private": true,
+  "main": "src/index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha",
+    "test:debug": "DEBUG=*,-mocha:* ./node_modules/.bin/mocha"
+  },
+  "author": "jack0son",
+  "license": "MIT",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^6.2.0"
+  }
+}
