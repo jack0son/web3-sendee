@@ -1,12 +1,12 @@
-# 📬 web3-act
+# 📬 sendee
 
 **Just send it** ✔️
 
-Web3 as a service with self healing subscriptions and transactions. Easily spin
+Web3 microservice with self healing subscriptions and transactions. Easily spin
 up a web3 backend without worrying about transaction juggling, provider
 failures, or subscription reliability.
 
-Run me as service, or start me from your dApp back end. When I start a fire,
+Run me as service, or start me from your dApp backend code. When I start a fire,
 I'll set it 🔥 at a safe distance.
 
 - Self healing subscriptions (events, blockheaders)
@@ -23,7 +23,7 @@ modes across transaction management, network connection, and event
 subscriptions. Web3 itself has also been known for arbitrary failures caused by
 bugs.
 
-Web3-act uses a recovery-oriented approach to masking failures, only reporting
+Sendee uses a recovery-oriented approach to masking failures, only reporting
 back to the service caller when the fault is irresolvable or due to an invalid
 parameter.
 
@@ -43,7 +43,7 @@ substituted or optimized for your use case.
 
 ## Under the hood
 
-Web3-act uses an actor model (built with [wact](https://jack0son/wact)) to
+Sendee uses an actor model (built with [wact](https://github.com/jack0son/wact)) to
 address the recurring concurrency and reliability issues encountered with
 complex web3 services, and isolate their failures into separate
 execution contexts.
@@ -56,9 +56,7 @@ a glorified semaphore.
 1. Coordinate transaction nonces and provider connections
 2. Isolate provider failures from transaction failures
 
-Use web3-act to build a microservice
-
-Web3-act gives you a number of fault tolerance and address
+Sendee gives you a number of fault tolerance and address
 
 ## Fault Tolerance
 
