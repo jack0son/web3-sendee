@@ -1,20 +1,19 @@
-# 📬 sendee
+# 💸 sendee
 
 **Just send it** ✔️
 
 Web3 microservice with self healing subscriptions and transactions. Easily spin
 up a web3 backend without worrying about transaction juggling, provider
-failures, or subscription reliability.
+failures, or subscription reliability. Built with [📬 Wact](https://github.com/jack0son/wact).
 
-Run me as service, or start me from your dApp backend code. When I start a fire,
-I'll set it 🔥 at a safe distance.
+Run me as service, or start me from your dApp backend code. When I catch 🔥, it
+will be at a safe distance.
 
-- Self healing subscriptions (events, blockheaders)
-- Intelligent transaction submission (indempotence, gas calculation, nonce and
-  address pool management)
-- Provider redundancy (provide a list of fall-through providers)
-- Isolate frequent web3 faults from the rest of your application
-- Built-in monitoring with sentry or twitter DMs
+- ✔️ Self healing subscriptions (events, blockheaders)
+- ✔️ Intelligent transaction submission (indempotence, gas calculation, nonce and address pool management)
+- ✔️ Provider redundancy (provide a list of fall-through providers)
+- ✔️ Isolate frequent web3 faults from the rest of your application
+- ✔️ Built-in monitoring with sentry or twitter DMs
 
 **Why?**
 
@@ -43,7 +42,7 @@ substituted or optimized for your use case.
 
 ## Under the hood
 
-Sendee uses an actor model (built with [wact](https://github.com/jack0son/wact)) to
+Sendee uses an actor model ([Wact](https://github.com/jack0son/wact)) to
 address the recurring concurrency and reliability issues encountered with
 complex web3 services, and isolate their failures into separate
 execution contexts.
