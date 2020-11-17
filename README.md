@@ -2,11 +2,13 @@
 
 **Just send it** ✔️
 
+_WIP - package in process of being extracted from dApp monorepo_
+
 Web3 microservice with self healing subscriptions and transactions. Easily spin
 up a web3 backend without worrying about transaction juggling, provider
 failures, or subscription reliability. Built with [📬 Wact](https://github.com/jack0son/wact).
 
-Run me as service, or start me from your dApp backend code. When I catch 🔥, it
+Run me as service, or start me from your dApp backend code. When I catch 🔥 it
 will be at a safe distance.
 
 - ✔️ Self healing subscriptions (events, blockheaders)
@@ -27,7 +29,7 @@ back to the service caller when the fault is irresolvable or due to an invalid
 parameter.
 
 Allows you to separate the domain logic of your web3 service, such as an oracle,
-market maker, analytics backend etc., from web3 boiler plate and failures so you
+market maker, analytics backend etc. from web3 boiler plate and failures so you
 can focus more on behaviour and less on reliability.
 
 It also implements useful preset algorithms for transaction preflight processes
