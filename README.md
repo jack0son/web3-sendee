@@ -17,6 +17,11 @@ will be at a safe distance.
 - ✔️ Isolate frequent web3 faults from the rest of your application
 - ✔️ Built-in monitoring with sentry or twitter DMs
 
+Sendee takes responsibility for blockchain nuances, applying its own policies for
+problems like account balances, gas usage, and node availability, giving the
+rest of the application a much smaller error and API surface to work
+with, and some clean assumptions for how web3 interactions are handled.
+
 **Why?**
 
 When interacting with the Ethereum blockchain there is a broad set of failure
