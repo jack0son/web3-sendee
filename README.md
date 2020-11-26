@@ -12,7 +12,7 @@ Run me as service, or start me from your dApp backend code. When I catch 🔥 it
 will be at a safe distance.
 
 - ✔️ Self healing subscriptions (events, blockheaders)
-- ✔️ Intelligent transaction submission (indempotence, gas calculation, nonce and address pool management)
+- ✔️ Intelligent transaction submission (gas calculation, nonce and address pool management)
 - ✔️ Provider redundancy (provide a list of fall-through providers)
 - ✔️ Isolate frequent web3 faults from the rest of your application
 - ✔️ Built-in monitoring with sentry or twitter DMs
@@ -62,7 +62,24 @@ a glorified semaphore.
 1. Coordinate transaction nonces and provider connections
 2. Isolate provider failures from transaction failures
 
-Sendee gives you a number of fault tolerance and address
+Sendee gives you a number of fault tolerance and address.
+
+Actors help seperate the frequent and broad set of errors that occur in web3
+calls, from the simple core functionality we want: sending transactions and
+subscribing to events.
+
+For example:
+* Provider / websocket connection errors
+* Nonce errors
+* Transaction errors (paramaters, client, node, eth network, onchain, etc)
+
+
+One such assumption is that transactions will never fail due a lack of
+connection to the ethereum node. Once the web3 service receives a transaction
+message, it becomes responsible for confirming it with the network. Upon
+failure, the requesting service receives a message which enacts it's
+own policies for dealing with reverts and incorrect parameters.
+
 
 ## Fault Tolerance
 
@@ -78,6 +95,5 @@ Address pool / nonce management
 - Gas Policy
 - Transaction cost management
 - Transaction Replacement
-- Transactions treated as indempotent
 
 ## Contracts
